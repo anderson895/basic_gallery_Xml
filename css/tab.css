@@ -1,0 +1,78 @@
+.tab-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab-button:hover {
+    background-color: #555;
+}
+
+.tab-content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .tab-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+/* Base Styles */
+.tab-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content {
+    display: none;
+    width: 100%; /* Ensures full width */
+}
+
+/* Ensure images stay within parent container */
+.tab-content img {
+    max-width: 100%; /* Ensures image does not exceed parent width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below inline images */
+    margin: 0 auto; /* Centers image horizontally */
+    padding: 0; /* Removes any default padding */
+}

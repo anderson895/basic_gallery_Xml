@@ -1,0 +1,135 @@
+/* Reset styles for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position dropdown below the link */
+    left: 50%; /* Position horizontally at the center */
+    transform: translateX(-50%); /* Move back by half of its own width to center */
+    text-align: center; /* Center align text */
+    width: 200px; /* Set the desired width */
+    padding: 20px; /* Add padding inside the dropdown */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.dropdown-content a {
+    color: white; /* Set text color for links */
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #555555; /* Change background color on hover */
+}
+
+/* Show dropdown content when hovering over the parent element */
+.parent:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for Dropdown Links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Hide navigation links by default on small screens */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .icon {
+        display: block;
+        float: right;
+        cursor: pointer;
+           color: white !important;
+        text-decoration: none; /* Remove underline */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* Display navigation links on larger screens */
+    .icon {
+        display: none;
+       
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: relative;
+        background-color: transparent;
+        text-align: right;
+    }
+
+    .nav-links li {
+        display: inline;
+        margin-left: 20px;
+    }
+}

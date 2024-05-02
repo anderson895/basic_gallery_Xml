@@ -1,0 +1,82 @@
+/* Styles for Gallery Container */
+.gallery-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Thumbnails */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align thumbnails to start of flex container */
+}
+
+.thumbnails img {
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    flex: 0 0 calc(20% - 20px); /* Adjust to desired width (20% for 5 columns per row) */
+    max-width: calc(20% - 20px); /* Adjust to desired width */
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .thumbnails img {
+        flex: 0 0 calc(33.33% - 20px); /* Adjust for 3 columns per row on smaller screens */
+        max-width: calc(33.33% - 20px); /* Adjust for 3 columns per row on smaller screens */
+    }
+}
+
+
+
+
+
+/* Styles for Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    text-align: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+/* Close Button for Modal */
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .thumbnails img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
